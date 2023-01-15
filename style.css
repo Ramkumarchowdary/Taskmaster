@@ -25,15 +25,21 @@ form input,form button{
     padding: 0.5rem;
     font-size: 2rem;
     border:none;
-    background: white ;
-
+    background: white;
+  box-shadow: none;
 }
+
+form input:active {
+  outline: 5px solid #fda085;
+}
+
+
 form button{
     color: #d88771 ;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
-
+  margin-left: 10px;
 }
 form button:hover{
     background: #d88771;

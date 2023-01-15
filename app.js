@@ -38,17 +38,30 @@ function addTodo(event){
     // clear  to do input in the value
     todoInput.value="";
 }
+
+function deleteAnimation(todo){
+   // animation 
+          todo.classList.add("fall");
+          todo.addEventListener('transitionend',function(){
+          todo.remove();  
+          });
+}
+
 function deleteCheck(e){
     const item =e.target;
     // delete todo
     if(item.classList[0]==="trash-btn"){
         const todo=item.parentElement;
-        // animation 
-        todo.classList.add("fall");
-        todo.addEventListener('transitionend',function(){
-        todo.remove();  
-        });
-        
+      
+          //Check if task is done or not. If not, confirm delete action using alert box
+      if(!todo.classList.contains("completed")){
+        let decision = confirm("This item has not been completed. Are you sure you want to drop this?");
+        if(decision){
+         deleteAnimation(todo);
+        }
+      } else {
+        deleteAnimation(todo);
+      }
     }
 
     // check  mark
