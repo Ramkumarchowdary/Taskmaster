@@ -46,8 +46,8 @@ function deleteCheck(e){
         // animation 
         todo.classList.add("fall");
         todo.addEventListener('transitionend',function(){
-          todo.remove();  
-        })
+        todo.remove();  
+        });
         
     }
 
