@@ -45,7 +45,7 @@ form button:hover{
     background: #d88771;
     color: white;
 }
-.todo-container{
+.todo-container ,h1{
     display: flex;
     justify-content:center;
     align-items: center;
@@ -145,3 +145,7 @@ select{
     margin: 0 auto;
     }
     } */
+
+    h3{
+        margin: 2px auto;
+    }
